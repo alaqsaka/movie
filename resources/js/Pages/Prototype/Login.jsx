@@ -1,4 +1,5 @@
 import TextInput from "@/Components/TextInput";
+import InputLabel from "@/Components/InputLabel";
 
 export default function Login() {
     return (
@@ -25,9 +26,10 @@ export default function Login() {
                     <form className="w-[370px]">
                         <div className="flex flex-col gap-6">
                             <div>
-                                <label className="text-base block mb-2">
-                                    Email Address
-                                </label>
+                                <InputLabel
+                                    forInput="email"
+                                    value="Email Address"
+                                />
                                 <TextInput
                                     type="email"
                                     name="email"
@@ -35,9 +37,10 @@ export default function Login() {
                                 />
                             </div>
                             <div>
-                                <label className="text-base block mb-2">
-                                    Password
-                                </label>
+                                <InputLabel
+                                    forInput="password"
+                                    value="Password"
+                                />
                                 <input
                                     type="password"
                                     name="password"

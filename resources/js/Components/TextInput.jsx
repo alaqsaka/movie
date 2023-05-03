@@ -1,5 +1,4 @@
 import { useEffect, useRef } from "react";
-import "../../css/input.css";
 import PropTypes from "prop-types";
 
 TextInput.propTypes = {
@@ -49,7 +48,9 @@ export default function TextInput({
                 autoComplete={autoComplete}
                 required={required}
                 onChange={(e) => handleChange(e)}
-                className={`rounded-2xl bg-form-bg py-[13px] px-7 w-full input-${variant} ${className}`}
+                className={`rounded-2xl bg-form-bg py-[13px] px-7 w-full ${
+                    isError && "input-error"
+                } input-${variant} ${className}`}
                 ref={input}
                 placeholder={placeholder}
                 defaultValue={defaultValue}
