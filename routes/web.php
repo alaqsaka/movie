@@ -28,10 +28,13 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::prefix('prototype')->group(function () {
+Route::prefix('prototype')->name('prototype.')->group(function () {
     route::get('/login', function () {
         return Inertia::render('Prototype/Login');
-    });
+    })->name('login');
+    route::get('/register', function () {
+        return 'register page';
+    })->name('register');
 });
 
 require __DIR__.'/auth.php';

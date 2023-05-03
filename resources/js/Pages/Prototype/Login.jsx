@@ -1,5 +1,7 @@
 import TextInput from "@/Components/TextInput";
 import InputLabel from "@/Components/InputLabel";
+import Button from "@/Components/Button";
+import { Link } from "@inertiajs/react";
 
 export default function Login() {
     return (
@@ -50,30 +52,19 @@ export default function Login() {
                             </div>
                         </div>
                         <div className="grid space-y-[14px] mt-[30px]">
-                            <a
-                                href="/"
-                                className="rounded-2xl bg-alerange py-[13px] text-center"
-                            >
+                            <Button type="button" variant="primary">
                                 <span className="text-base font-semibold">
                                     Start Watching
                                 </span>
-                            </a>
-                            <a
-                                href="sign_up.html"
-                                className="rounded-2xl border border-white py-[13px] text-center"
-                            >
-                                <span className="text-base text-white">
-                                    Create New Account
-                                </span>
-                            </a>
-                            <button
-                                type="submit"
-                                className="rounded-2xl bg-alerange py-[13px] text-center"
-                            >
-                                <span className="text-base font-semibold">
-                                    Start Watching
-                                </span>
-                            </button>
+                            </Button>
+
+                            <Link href={route("prototype.register")}>
+                                <Button type="button" variant="light-outline">
+                                    <span className="text-base font-semibold">
+                                        Create New Account
+                                    </span>
+                                </Button>
+                            </Link>
                         </div>
                     </form>
                 </div>
