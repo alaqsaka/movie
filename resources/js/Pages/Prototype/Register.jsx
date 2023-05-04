@@ -17,7 +17,7 @@ export default function Register() {
                 </div>
                 <div className="py-24 flex laptopLg:ml-[680px] laptopXl:ml-[870px]">
                     <div>
-                        <img src="assets/images/moonton-white.svg" alt="" />
+                        <img src="/images/moonton-white.svg" alt="" />
                         <div className="my-[70px]">
                             <div className="font-semibold text-[26px] mb-3">
                                 Sign Up
@@ -68,11 +68,13 @@ export default function Register() {
                                 </div>
                             </div>
                             <div className="grid space-y-[14px] mt-[30px]">
-                                <Button>
-                                    <span className="text-base font-semibold">
-                                        Sign Up
-                                    </span>
-                                </Button>
+                                <Link href={route("prototype.dashboard")}>
+                                    <Button>
+                                        <span className="text-base font-semibold">
+                                            Sign Up
+                                        </span>
+                                    </Button>
+                                </Link>
                                 <Link href={route("prototype.login")}>
                                     <Button variant="light-outline">
                                         <span className="text-base text-white">
